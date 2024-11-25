@@ -15,17 +15,17 @@ import BentoItem from './BentoItem.astro';
   >
     <div
       slot="image"
-      class="absolute left-0 top-0 bottom-0
-        h-full group-hover:scale-110 transition-scale duration-1000
-        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('/mountain.png')"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+      -z-10 h-full w-full bg-blue-950
+      bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      data-src="/mountain.webp"
     >
     </div>
     <p slot="content" class="max-w-xl">
-      Este año, el momento de la alfombra azul sera sustituido y mejorado,
-      gracias a los increibles paisajes andorranos, por una <strong
-        >alfombra blanca en plena nieve</strong
-      >, situada en las <strong>pistas de esqui de Andorra</strong>
+      Una nueva edicion <strong>cargada de novedades</strong> y contenido, que empezara
+      varias semanas antes de la ansiada gala. <strong
+        >Directos especiales, colaboraciones, conciertos y mucho mas</strong
+      > en lo que sera una autentica fiesta dedicada a la creacion de contenido.
     </p>
   </BentoItem>
   <BentoItem
@@ -37,10 +37,16 @@ import BentoItem from './BentoItem.astro';
       slot="image"
       class="absolute left-0 top-0 bottom-0
         h-full group-hover:scale-110 transition-scale duration-1000
-        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('/mountain.png')"
+        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-800 -z-10"
+      data-src="/grefg.webp"
     >
     </div>
+    <p slot="content" class="max-w-xl">
+      Este año, el momento de la alfombra azul sera sustituido y mejorado,
+      gracias a los increibles paisajes andorranos, por una <strong
+        >alfombra blanca en plena nieve</strong
+      >, situada en las <strong>pistas de esqui de Andorra</strong>
+    </p>
   </BentoItem>
   <BentoItem
     class="col-span md:col-span-6"
@@ -52,9 +58,15 @@ import BentoItem from './BentoItem.astro';
       class="absolute left-0 top-0 bottom-0
         h-full group-hover:scale-110 transition-scale duration-1000
         ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('/mountain.png')"
+      data-src="/pistas.webp"
     >
     </div>
+    <p slot="content" class="max-w-xl">
+      Una gala de premios llena de <strong>contenido de primer nivel</strong> y <strong
+        >muchas sorpresas</strong
+      >, en la que se descubriran los ganadores de esta tercera edicion de los
+      Premios ESLAND.
+    </p>
   </BentoItem>
   <BentoItem
     class="col-span md:col-span-4"
@@ -65,8 +77,16 @@ import BentoItem from './BentoItem.astro';
       class="absolute left-0 top-0 bottom-0
         h-full group-hover:scale-110 transition-scale duration-1000
         ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
-      style="background-image: url('/mountain.png')"
+      data-src="/laptop.webp"
     >
     </div>
+    <p slot="content" class="max-w-xl">
+      Este año, el reddit no formara parte de las votaciones de los premios,
+      pero si que <strong>formara parte de la comunidad</strong>. El subreddit
+      oficial de los Premios ESLAND esta abierto para ti, para que compartas tus
+      clips, tus opiniones y para que <strong
+        >interactues con toda la comunidad</strong
+      > del streaming hispanohablante.
+    </p>
   </BentoItem>
 </section>
