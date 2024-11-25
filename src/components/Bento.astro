@@ -1,0 +1,72 @@
+---
+import BentoItem from './BentoItem.astro';
+---
+
+<section
+  class={`
+    w-full max-w-[1400px]
+    grid grid-cols-10 auto-rows-[30rem] gap-4
+    mx-auto p-20
+  `}
+>
+  <BentoItem
+    class="col-span md:col-span-4"
+    title="ANDORRA: EL CENIT DE LOS PREMIOS ESLAND"
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0
+        h-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/mountain.png')"
+    >
+    </div>
+    <p slot="content" class="max-w-xl">
+      Este año, el momento de la alfombra azul sera sustituido y mejorado,
+      gracias a los increibles paisajes andorranos, por una <strong
+        >alfombra blanca en plena nieve</strong
+      >, situada en las <strong>pistas de esqui de Andorra</strong>
+    </p>
+  </BentoItem>
+  <BentoItem
+    class="col-span md:col-span-6"
+    title="LA ALFOMBRA BLANCA"
+    subtitle="16 de Febrero de 2024"
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0
+        h-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/mountain.png')"
+    >
+    </div>
+  </BentoItem>
+  <BentoItem
+    class="col-span md:col-span-6"
+    title="LA GALA"
+    subtitle="17 de Febrero de 2024"
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0
+        h-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/mountain.png')"
+    >
+    </div>
+  </BentoItem>
+  <BentoItem
+    class="col-span md:col-span-4"
+    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+  >
+    <div
+      slot="image"
+      class="absolute left-0 top-0 bottom-0
+        h-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-ou opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/mountain.png')"
+    >
+    </div>
+  </BentoItem>
+</section>
