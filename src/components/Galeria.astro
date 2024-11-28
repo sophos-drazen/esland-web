@@ -4,14 +4,33 @@ import 'photoswipe/style.css';
 const GALLERY_IMAGES = [];
 ---
 
-<div class="grid grid-cols-3 max-w-6xl gap-4 mx-auto py-20" id="gallery">
+<div class="grid grid-cols-3 max-w-6xl gap-6 mx-auto py-20" id="gallery">
   {
     Array.from({ length: 9 }).map((_, i) => (
-      <a href={`/archivo-page/1/gallery/img-${i + 1}.jpg`} target="_blank">
-        <img src={`/archivo-page/1/gallery/img-${i + 1}.webp`} alt="" />
+      <a
+        class="group rounded-xl hover:scale-105 transition-all 
+        relative aspect-square"
+        href={`/archivo-page/1/gallery/img-${i + 1}.jpg`}
+        target="_blank"
+        data-cropped="true"
+        data-pswp-width="1152"
+        data-pswp-height="767"
+      >
+        <img
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+          src={`/archivo-page/1/gallery/thumbnails/img-${i + 1}.webp`}
+          alt=""
+        />
+        <img
+          class="blur-lg absolute inset-0 transition
+          group-hover:contrast-150 opacity-70 -z-10 object-cover"
+          loading="lazy"
+          src={`/archivo-page/1/gallery/thumbnails/img-${i + 1}.webp`}
+          alt=""
+        />
       </a>
     ))
-  }
 </div>
 
 <script>
