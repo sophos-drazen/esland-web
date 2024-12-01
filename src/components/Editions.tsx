@@ -1,6 +1,6 @@
 import { useState } from "preact/hooks";
 import Galeria from "./Galeria.astro"
-import Numeros from "./Numeros.astro";
+import Numeros from "./Numeros";
 import Palmares from "@/components/Palmares.tsx";
 import editions from "@/data/editions-info.json"
 import styles from "@/components/styles/Editions.module.css"
