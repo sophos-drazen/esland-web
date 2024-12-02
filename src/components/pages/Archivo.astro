@@ -1,30 +1,37 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import HeroContainer from '../HeroContainer.astro';
-import Button from '../Button';
-import Numeros from '@/components/Numeros';
-import Galeria from '../Galeria.astro';
+import Layout from "@/layouts/Layout.astro"
 
-import { getI18N } from '@/i18n';
+import HeroContainer from "@/components/HeroContainer.astro"
+import Button from "@/components/Button.tsx"
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+import { getI18N } from "@/i18n"
+import Editions from "../Editions"
+
+const edicion = "2"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title="Archivo" description="Archivo">
+<Layout
+  title=`${i18n.SEO.ARCHIVO_TITLE}&nbsp;${new Date().getFullYear()}`
+  description={i18n.SEO.ARCHIVO_DESCRIPTION}
+>
   <HeroContainer img="/archivo-background.webp">
-    <h1 class="text-6xl uppercase mb-20 font-tomaso tracking-widest">
-      Ediciones anteriores
-    </h1>
-    <Button
-      class="animate-fade-up"
-      url="https://www.youtube.com/watch?=1YmpPrqKP-g"
+    <h1
+      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
     >
-      REVIVE LA ULTIMA GALA
+      {i18n.ARCHIVO.HERO_TITLE}
+    </h1>
+
+    <Button
+      className="animate-fade-up uppercase"
+      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
+    >
+      {i18n.ARCHIVO.HERO_BUTTON}
     </Button>
   </HeroContainer>
-  <main>
-    <Galeria />
-    <Numeros />
+
+  <main class="pb-24">
+    <Editions i18n={i18n} client:load/>
   </main>
 </Layout>
